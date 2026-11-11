@@ -33,7 +33,7 @@ export function Home() {
         <p className="brush-edge -mt-1 rotate-1 bg-brand px-4 py-1 font-display text-lg text-navy">
           3º Acampamento FAC
         </p>
-        <p className="mt-3 font-hand text-2xl text-navy/80">Juntos por uma só missão!</p>
+        <p className="mt-3 font-hand text-2xl text-navy/80">Juntos até o céu!</p>
       </div>
 
       <div className="mt-8 space-y-8">
