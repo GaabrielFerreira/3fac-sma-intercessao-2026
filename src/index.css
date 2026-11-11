@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap");
 @import "tailwindcss";
 
-/* Tema do projeto (cores tiradas do pôster do 3º Acampamento FAC) */
+/* Tema do projeto (cores tiradas da logo e do template oficial do FAC) */
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-display: "Permanent Marker", cursive;
   --font-hand: "Caveat", cursive;
-  --color-navy: #14234f;
+  --color-navy: #002e7b;
+  --color-royal: #214cab;
   --color-sky: #a9cdef;
   --color-sky-soft: #dbe9f7;
-  --color-brand: #f58a1f;
+  --color-brand: #fd751f;
+  --color-green: #9cc93a;
   --color-paper: #f6f0e4;
 }
 

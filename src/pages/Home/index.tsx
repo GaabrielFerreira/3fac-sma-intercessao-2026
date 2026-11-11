@@ -1,7 +1,7 @@
-import { BookOpen, Church, ListChecks, Music, Shield } from "lucide-react";
+import { BookOpen, Church, ListChecks, Music, Plane, Shield } from "lucide-react";
+import logo from "@/assets/logo-white.png";
 import { BrushTitle } from "@/components/BrushTitle";
 import { ListCard } from "@/components/ListCard";
-import { Tent } from "@/components/Tent";
 import { groupTitles, prayers } from "@/data/prayers";
 import type { PrayerGroup } from "@/data/types";
 import { playlistUrl } from "@/data/vidaPlena";
@@ -20,23 +20,24 @@ function SectionTitle({ children }: { children: string }) {
 
 export function Home() {
   return (
-    <main className="mx-auto max-w-md px-5 pb-12 pt-8">
-      <div className="flex flex-col items-center text-center">
-        <Tent className="h-14 w-16" />
-        <p className="mt-1 font-display text-4xl leading-none">FAC</p>
-        <p className="text-xs font-bold tracking-[0.3em]">ACAMPAMENTO</p>
-        <p className="text-[10px] font-semibold tracking-wide opacity-70">
-          BASÍLICA DE SÃO MIGUEL ARCANJO
-        </p>
+    <main className="pb-12">
+      <header className="relative overflow-hidden rounded-b-[2.5rem] bg-linear-to-b from-navy to-royal px-5 pb-10 pt-8 text-center text-white">
+        <svg viewBox="0 0 300 120" className="pointer-events-none absolute -right-6 top-3 w-64 opacity-70" aria-hidden="true">
+          <path d="M0 100C60 100 80 20 140 40S200 90 250 30" fill="none" stroke="#fff" strokeWidth="2" strokeDasharray="7 7" />
+        </svg>
+        <Plane size={34} className="absolute right-5 top-4 rotate-[-10deg] fill-white" aria-hidden="true" />
 
-        <BrushTitle className="mt-8 text-4xl">Intercessão</BrushTitle>
-        <p className="brush-edge -mt-1 rotate-1 bg-brand px-4 py-1 font-display text-lg text-navy">
-          3º Acampamento FAC
-        </p>
-        <p className="mt-3 font-hand text-2xl text-navy/80">Juntos até o céu!</p>
-      </div>
+        <div className="relative mx-auto max-w-md">
+          <img src={logo} alt="FAC Acampamento, Basílica de São Miguel Arcanjo" className="mx-auto w-44" />
+          <BrushTitle className="mt-4 bg-paper text-4xl text-navy">Intercessão</BrushTitle>
+          <p className="brush-edge -mt-1 rotate-1 bg-brand px-4 py-1 font-display text-lg text-white">
+            3º Acampamento FAC
+          </p>
+          <p className="mt-3 font-hand text-2xl text-white/90">Juntos até o céu!</p>
+        </div>
+      </header>
 
-      <div className="mt-8 space-y-8">
+      <div className="mx-auto mt-8 max-w-md space-y-8 px-5">
         {groups.map((group) => (
           <section key={group}>
             <SectionTitle>{groupTitles[group]}</SectionTitle>
@@ -66,7 +67,7 @@ export function Home() {
         </section>
       </div>
 
-      <p className="mt-12 text-center font-hand text-xl opacity-80">
+      <p className="mt-12 px-5 text-center font-hand text-xl opacity-80">
         Santa Teresinha, rogai por nós!
       </p>
     </main>
