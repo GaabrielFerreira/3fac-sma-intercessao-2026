@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+/* Tema do projeto (cores tiradas do pôster do 3º Acampamento FAC) */
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --color-navy: #14234f;
+  --color-sky: #a9cdef;
+  --color-brand: #f58a1f;
+  --color-paper: #f6f0e4;
+}
+
+body {
+  @apply bg-paper font-sans text-navy;
+}
