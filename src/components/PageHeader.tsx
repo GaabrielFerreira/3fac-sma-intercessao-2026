@@ -12,7 +12,7 @@ export function PageHeader() {
         <ArrowLeft size={18} />
         Início
       </Link>
-      <Tent className="h-8 w-10" />
+      <Tent className="h-9 w-auto" />
     </header>
   );
 }

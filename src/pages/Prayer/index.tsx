@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { getPrayer } from "@/data/prayers";
 import type { Block } from "@/data/types";
 import { useFontSize } from "@/hooks/useFontSize";
+import { useWakeLock } from "@/hooks/useWakeLock";
 
 function renderBlock(block: Block, index: number) {
   switch (block.type) {
@@ -43,6 +44,7 @@ function renderBlock(block: Block, index: number) {
 export function Prayer() {
   const { slug = "" } = useParams();
   const font = useFontSize();
+  useWakeLock();
   const prayer = getPrayer(slug);
 
   if (!prayer) return <Navigate to="/" replace />;
