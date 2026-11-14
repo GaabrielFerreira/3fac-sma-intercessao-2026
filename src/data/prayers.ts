@@ -107,7 +107,7 @@ export const prayers: Prayer[] = [
     slug: "sao-bento",
     title: "São Bento",
     subtitle: "Oração da medalha",
-    group: "prayers",
+    group: "saints",
     available: true,
     blocks: [
       {
@@ -120,7 +120,7 @@ export const prayers: Prayer[] = [
     slug: "padre-pio",
     title: "São Padre Pio",
     subtitle: "Fica comigo, Senhor",
-    group: "prayers",
+    group: "saints",
     available: true,
     blocks: [
       { type: "p", text: "Fica comigo, Senhor, porque é necessário que Tu estejas presente para que eu não Te esqueça. Sabes quão facilmente eu Te abandono." },
@@ -138,6 +138,107 @@ export const prayers: Prayer[] = [
       { type: "p", text: "Fica comigo, Senhor, porque na hora da minha morte quero estar unido a Ti, se não pela comunhão, ao menos pela graça e pelo amor." },
       { type: "p", text: "Fica comigo, Jesus. Não peço consolações divinas, porque não as mereço, mas o dom da Tua presença, ah, isso sim, peço-Te!" },
       { type: "p", text: "Fica comigo, Senhor, é só a Ti que procuro: o Teu amor, a Tua graça, a Tua vontade, o Teu coração, o Teu Espírito, porque Te amo e não peço outra recompensa senão amar-Te cada vez mais. Com um amor firme, prático, amar-Te-ei de todo o coração enquanto estiver na terra, e continuarei a amar-Te perfeitamente por toda a eternidade. Amém." },
+    ],
+  },
+
+  {
+    slug: "sao-carlo-acutis",
+    title: "São Carlo Acutis",
+    group: "saints",
+    available: true,
+    blocks: [
+      { type: "p", text: "Ó Deus, nosso Pai, obrigado por nos teres dado Carlo, modelo de vida para os jovens, e mensagem de amor para todos. Tu fizeste com que se apaixonasse pelo teu Filho Jesus, fazendo da Eucaristia a sua “rodovia para o Céu”. Tu lhe deste Maria, como mãe amadíssima, e fizeste dele com o Rosário um cantor da sua ternura. Aceita a sua oração por nós. Olha especialmente para os pobres, que ele amou e socorreu." },
+      { type: "p", text: "(Concede também a mim, pela sua intercessão, a graça de que eu preciso...)" },
+      { type: "p", text: "E torna plena a nossa alegria, colocando Carlo entre os santos da tua igreja universal, para que o seu sorriso resplandeça ainda para nós, para a glória do teu nome. Amém!" },
+    ],
+  },
+  {
+    slug: "santa-filomena",
+    title: "Santa Filomena",
+    subtitle: "Oração, coroinha e ladainha",
+    group: "saints",
+    available: true,
+    blocks: [
+      { type: "heading", text: "Oração" },
+      { type: "p", text: "Ó gloriosa Santa Filomena, Virgem e Mártir, exemplo de fé e de esperança, generosa na caridade, a vós suplico, escutai a minha prece. Do céu onde reinais, faça cair sobre mim toda a proteção e auxílio de que necessito, neste momento em que minhas forças se enfraquecem. Vós que sois tão poderosa junto a Deus, intercedei por mim e alcançai a graça que vos peço (mencione agora a graça que deseja receber). Ó Santa Filomena, ilustre por tantos milagres, rogai por mim. Não me abandoneis, mas lançai vosso olhar sobre mim e minha família. Afastai as tentações, dai paz a minha alma e abençoai a minha casa. Ó Santa Filomena, pelo sangue que derramaste por amor a Jesus Cristo, alcançai a graça que vos peço (repita agora o seu pedido)." },
+      { type: "response", text: "Rezar um Pai-Nosso, uma Ave-Maria e um Glória ao Pai." },
+
+      { type: "heading", text: "Modo de rezar a coroinha" },
+      { type: "p", text: "Rezar o Credo, 3 Pai-Nossos à Santíssima Trindade em honra de sua pureza e 13 Ave-Marias em honra dos 13 anos em que viveu. Entre cada Ave-Maria, rezar:" },
+      { type: "p", text: "“Santa Filomena, pelo Sangue que derramaste por amor a Jesus Cristo, alcançai-me a graça que vos peço.”" },
+      { type: "p", text: "Rezar também a oração, a Ladainha e uma Salve Rainha." },
+
+      { type: "heading", text: "Ladainha de Santa Filomena" },
+      { type: "response", text: "Composta pelo Santo Cura d’Ars" },
+      {
+        type: "list",
+        items: [
+          "Senhor, tende piedade de nós.",
+          "Jesus Cristo, tende piedade de nós.",
+          "Senhor, tende piedade de nós.",
+          "Jesus Cristo, ouvi-nos.",
+          "Jesus Cristo, atendei-nos.",
+          "Pai Celeste, que sois Deus, tende piedade de nós.",
+          "Filho de Deus, Redentor do Mundo, tende piedade de nós.",
+          "Espírito Santo, que sois Deus, tende piedade de nós.",
+          "Santíssima Trindade, que sois um só Deus, tende piedade de nós.",
+          "Santa Maria, Rainha das Virgens, rogai por nós.",
+        ],
+      },
+      { type: "response", text: "A cada invocação a Santa Filomena, responder: rogai por nós" },
+      {
+        type: "list",
+        items: [
+          "Santa Filomena, cheia de abundantes graças desde o berço",
+          "Santa Filomena, fiel imitadora de Maria",
+          "Santa Filomena, vítima do amor de Jesus",
+          "Santa Filomena, modelo das Virgens",
+          "Santa Filomena, templo da perfeita humildade",
+          "Santa Filomena, abrasada no zelo da glória de Deus",
+          "Santa Filomena, exemplo de força e de perseverança",
+          "Santa Filomena, espelho das mais heroicas virtudes",
+          "Santa Filomena, firme e intrépida em face dos tormentos",
+          "Santa Filomena, flagelada como o vosso Divino Esposo",
+          "Santa Filomena, que preferistes as humilhações da morte aos esplendores do trono",
+          "Santa Filomena, que convertestes as testemunhas do vosso martírio",
+          "Santa Filomena, que cansastes o furor dos algozes",
+          "Santa Filomena, protetora dos inocentes",
+          "Santa Filomena, padroeira da juventude",
+          "Santa Filomena, asilo dos desgraçados",
+          "Santa Filomena, saúde dos doentes e enfermos",
+          "Santa Filomena, nova luz da Igreja militante",
+          "Santa Filomena, que confundis a impiedade do século",
+          "Santa Filomena, cujo nome é glorioso no Céu e temível para o inferno",
+          "Santa Filomena, ilustre pelos mais esplêndidos milagres",
+          "Santa Filomena, poderosa junto de Deus",
+          "Santa Filomena, que reinais na glória",
+        ],
+      },
+      {
+        type: "list",
+        items: [
+          "Cordeiro de Deus, que tirais o pecado do mundo, perdoai-nos, Senhor.",
+          "Cordeiro de Deus, que tirais o pecado do mundo, ouvi-nos, Senhor.",
+          "Cordeiro de Deus, que tirais o pecado do mundo, tende piedade de nós, Senhor.",
+        ],
+      },
+      { type: "p", text: "Rogai por nós, Santa Filomena, para que sejamos dignos das promessas de Cristo." },
+      { type: "heading", text: "Oremos" },
+      { type: "p", text: "Nós Vos suplicamos, Senhor, que nos concedais o perdão dos nossos pecados pela intercessão de Santa Filomena, Virgem Mártir, que foi sempre agradável aos vossos olhos pela sua eminente castidade e exercício de todas as virtudes." },
+      { type: "p", text: "Por Nosso Senhor Jesus Cristo que é Deus e convosco vive e reina na unidade do Espírito Santo. Amém." },
+
+      { type: "response", text: "Salve Rainha" },
+      { type: "p", text: hailHolyQueen },
+    ],
+  },
+  {
+    slug: "santa-catarina-de-sena",
+    title: "Santa Catarina de Sena",
+    group: "saints",
+    available: true,
+    blocks: [
+      { type: "p", text: "Ó Santa Catarina, assim como tu abrandaste o coração de mil homens bravos como leões com a tua santa palavra da razão, assim te peço, Santa Catarina, abranda o coração de meus inimigos. Se tiverem pés, que não me alcancem; se tiverem mãos, que não me agarrem; se tiverem olhos, que não me vejam, e se eles me virem, estarão acorrentados de pés e mãos, assim como viram Jesus Cristo pregado na cruz. A Cruz de Jesus Cristo caia entre nós e responda por mim." },
+      { type: "response", text: "Rezar um Pai-Nosso e três Ave-Marias, oferecer à Santa Catarina e pedir ajuda e defesa." },
     ],
   },
 
@@ -387,6 +488,7 @@ export const prayers: Prayer[] = [
 
 export const groupTitles = {
   prayers: "Orações",
+  saints: "Santos",
   readings: "Leituras",
   rosaries: "Terços e coroas",
   novenas: "Novenas",

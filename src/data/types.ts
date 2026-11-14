@@ -5,7 +5,7 @@ export type Block =
   | { type: "response"; text: string }
   | { type: "list"; items: string[] };
 
-export type PrayerGroup = "prayers" | "readings" | "rosaries" | "novenas";
+export type PrayerGroup = "prayers" | "saints" | "readings" | "rosaries" | "novenas";
 
 export interface Prayer {
   slug: string;

@@ -1,4 +1,4 @@
-import { BookOpen, Church, Flower2, ListChecks, Music, Plane, Shield } from "lucide-react";
+import { BookOpen, Church, Flower2, ListChecks, Music, Plane, Shield, Star } from "lucide-react";
 import logo from "@/assets/logo-white.png";
 import { BrushTitle } from "@/components/BrushTitle";
 import { ListCard } from "@/components/ListCard";
@@ -8,12 +8,13 @@ import { playlistUrl } from "@/data/vidaPlena";
 
 const groupIcons: Record<PrayerGroup, React.ReactNode> = {
   prayers: <Shield size={22} />,
+  saints: <Star size={22} />,
   readings: <BookOpen size={22} />,
   rosaries: <Church size={22} />,
   novenas: <Flower2 size={22} />,
 };
 
-const groups: PrayerGroup[] = ["prayers", "readings", "rosaries", "novenas"];
+const groups: PrayerGroup[] = ["prayers", "saints", "readings", "rosaries", "novenas"];
 
 function SectionTitle({ children }: { children: string }) {
   return <h2 className="mb-3 font-display text-xl">{children}</h2>;
