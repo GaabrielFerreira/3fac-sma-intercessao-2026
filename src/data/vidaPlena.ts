@@ -19,4 +19,4 @@ export const vidaPlenaItems: VidaPlenaItem[] = [
 ];
 
 export const playlistUrl =
-  "https://open.spotify.com/playlist/3MMIUt15FNsMbA9OgcDg5t";
+  "https://open.spotify.com/playlist/2VJ6NevgrcldCNa0ogstCc";

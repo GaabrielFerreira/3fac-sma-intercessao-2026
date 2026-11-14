@@ -362,12 +362,34 @@ export const prayers: Prayer[] = [
       { type: "p", text: "Santa Virgem, esperança nossa, em vossas mãos deposito esta prece (fazer o pedido) e peço que a apresente ao coração de seu Filho Divino, o meu Senhor Jesus Cristo. Amém." },
     ],
   },
+
+  // ---------- Novenas ----------
+  {
+    slug: "novena-santa-teresinha",
+    title: "Novena de Santa Teresinha",
+    subtitle: "do Menino Jesus e da Sagrada Face",
+    group: "novenas",
+    available: true,
+    blocks: [
+      { type: "response", text: "Sinal da Cruz" },
+      { type: "p", text: signOfTheCross },
+      { type: "heading", text: "Oração" },
+      { type: "p", text: "“Santíssima Trindade, Pai, Filho e Espírito Santo, eu Vos agradeço todos os favores, todas as graças com que enriquecestes a alma de Vossa serva Teresa do Menino Jesus durante os 24 anos que passou na Terra." },
+      { type: "p", text: "Pelos méritos de tão querida santinha, conceda-me a graça que ardentemente Vos peço (fazer o pedido), se for conforme a Vossa Santíssima vontade e para salvação de minha alma." },
+      { type: "p", text: "Ajudai minha fé e minha esperança, ó Santa Teresinha, cumprindo, mais uma vez, sua promessa de que ninguém vos invocaria em vão, fazendo-me ganhar uma rosa, sinal de que alcançarei a graça pedida.”" },
+      { type: "heading", text: "Em seguida" },
+      { type: "response", text: "Glória (24 vezes)" },
+      { type: "p", text: glory },
+      { type: "p", text: "Santa Teresinha do Menino Jesus e da Sagrada Face, rogai por nós!" },
+    ],
+  },
 ];
 
 export const groupTitles = {
   prayers: "Orações",
   readings: "Leituras",
   rosaries: "Terços e coroas",
+  novenas: "Novenas",
 } as const;
 
 export function getPrayer(slug: string) {
