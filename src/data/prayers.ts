@@ -217,15 +217,157 @@ export const prayers: Prayer[] = [
     slug: "terco-de-sao-jose",
     title: "Terço de São José",
     group: "rosaries",
-    available: false,
-    blocks: [],
+    available: true,
+    blocks: [
+      { type: "heading", text: "Nas contas grandes (5 vezes)" },
+      { type: "p", text: "Meu glorioso São José, nas vossas maiores aflições e tribulações, não vos valeu o anjo do Senhor? Valei-me, São José!" },
+      { type: "heading", text: "Nas contas pequenas (10 vezes em cada dezena)" },
+      { type: "p", text: "Valei-me, São José." },
+      { type: "heading", text: "No fim, reze este oferecimento" },
+      { type: "p", text: "“A vós, glorioso São José, ofereço este terço em louvor e glória de Jesus e Maria, para que seja minha luz e guia, minha proteção e defesa, minha fortaleza e alegria em todos os meus trabalhos e tribulações, principalmente na hora da agonia." },
+      { type: "p", text: "Pelo nome de Jesus, pela glória de Maria, imploro o vosso poderoso patrocínio, para que me alcanceis a graça que tanto desejo. Falai em meu favor, advogai a minha causa no Céu e na Terra, alegrai a minha alma para honra de Jesus, de Maria e vossa. Amém.”" },
+    ],
+  },
+  {
+    slug: "rosario-de-sao-miguel-arcanjo",
+    title: "Rosário de São Miguel Arcanjo",
+    subtitle: "Saudação aos nove coros dos Anjos",
+    group: "rosaries",
+    available: true,
+    blocks: [
+      { type: "heading", text: "Início" },
+      { type: "p", text: "Vinde, ó Deus, em meu auxílio." },
+      { type: "p", text: "Apressai-vos em me socorrer." },
+      { type: "p", text: "Glória ao Pai e ao Filho e ao Espírito Santo." },
+      { type: "p", text: "Assim como era no princípio, agora e sempre, por todos os séculos dos séculos. Amém." },
+
+      { type: "heading", text: "Primeira saudação" },
+      { type: "p", text: "Saudamos o primeiro coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Serafins, para que o Senhor nos torne dignos de sermos abrasados de uma perfeita caridade. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Segunda saudação" },
+      { type: "p", text: "Saudamos o segundo coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Querubins para que o Senhor nos conceda a graça de fugirmos do pecado e procurarmos a perfeição cristã. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Terceira saudação" },
+      { type: "p", text: "Saudamos o terceiro coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Tronos, para que Deus derrame em nosso coração o espírito de verdadeira e sincera humildade. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Quarta saudação" },
+      { type: "p", text: "Saudamos o quarto coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste das Dominações, para que o Senhor nos conceda a graça de dominar nossos sentidos e de nos corrigir das nossas más paixões. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Quinta saudação" },
+      { type: "p", text: "Saudamos o quinto coro dos Anjos pedindo pela intercessão de São Miguel Arcanjo e do coro celeste das Potestades, para que o Senhor se digne proteger nossa alma contra as ciladas e as tentações do demônio. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Sexta saudação" },
+      { type: "p", text: "Saudamos o sexto coro dos Anjos pedindo pela intercessão de São Miguel e do coro admirável das Virtudes, para que o Senhor não nos deixe cair em tentação, mas nos livre de todo mal. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Sétima saudação" },
+      { type: "p", text: "Saudamos o sétimo coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro dos Principados, para que o Senhor encha nossa alma do espírito de uma verdadeira e sincera obediência. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Oitava saudação" },
+      { type: "p", text: "Saudamos o oitavo coro dos Anjos, pedindo pela intercessão de São Miguel Arcanjo e do coro celeste dos Arcanjos, para que o Senhor nos conceda o dom da perseverança na fé e nas boas obras, a fim de que possamos chegar a possuir a glória eterna do paraíso. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Nona saudação" },
+      { type: "p", text: "Saudamos o nono coro dos Anjos pedindo pela intercessão de São Miguel Arcanjo e do coro celeste de todos os Anjos, para que sejamos guardados por eles nesta vida mortal, para sermos conduzidos por eles à glória eterna do céu. Amém." },
+      { type: "response", text: "Um Pai-Nosso, três Ave-Marias e um Glória." },
+
+      { type: "heading", text: "Quatro Pai-Nossos" },
+      {
+        type: "list",
+        items: [
+          "1 Pai-Nosso em honra de São Miguel",
+          "1 Pai-Nosso em honra de São Gabriel",
+          "1 Pai-Nosso em honra de São Rafael",
+          "1 Pai-Nosso em honra de nosso Anjo da Guarda",
+        ],
+      },
+
+      { type: "heading", text: "Antífona" },
+      { type: "p", text: "Gloriosíssimo São Miguel, chefe e príncipe dos exércitos celestes, fiel guardião das almas, vencedor dos espíritos rebeldes, amado da casa de Deus, nosso admirável guia depois de Cristo, vós cuja excelência e virtude são eminentíssimas, dignai-vos livrar-nos de todos os males, nós todos que recorremos a vós com confiança, e fazei, pela vossa incomparável proteção, que adiantemos cada dia mais na fidelidade e perseverança em servir a Deus." },
+      { type: "p", text: "Rogai por nós, ó bem-aventurado São Miguel, príncipe da Igreja de Cristo." },
+      { type: "p", text: "Para que sejamos dignos de suas promessas." },
+
+      { type: "heading", text: "Oremos" },
+      { type: "p", text: "Deus todo-poderoso e eterno, que, por um prodígio de bondade e misericórdia, para a salvação dos homens escolhestes como príncipe de vossa Igreja o gloriosíssimo São Miguel Arcanjo, tornai-nos dignos, nós Vo-lo pedimos, de sermos preservados de todos os nossos inimigos, a fim de que, na hora de nossa morte, nenhum deles nos possa inquietar, mas que nos seja dado sermos introduzidos por ele na presença da vossa poderosa e augusta majestade, pelos merecimentos de Jesus Cristo, Nosso Senhor. Amém." },
+    ],
+  },
+  {
+    slug: "coroa-nossa-senhora-das-lagrimas",
+    title: "Coroa de Nossa Senhora das Lágrimas",
+    subtitle: "Rosário das Lágrimas",
+    group: "rosaries",
+    available: true,
+    blocks: [
+      { type: "heading", text: "Como é a coroa" },
+      { type: "p", text: "São 49 contas brancas, em grupos de 7, separados por 7 contas igualmente brancas. No fim, mais 3 contas brancas e a medalha de Nossa Senhora das Lágrimas, de um lado, e de Jesus Manietado, do outro." },
+
+      { type: "heading", text: "Oração inicial" },
+      { type: "p", text: "Eis-nos aqui aos Vossos pés, ó dulcíssimo Jesus Crucificado, para Vos oferecermos as lágrimas d’Aquela que, com tanto amor, Vos acompanhou no caminho doloroso do Calvário. Fazei, ó bom Mestre, que nós saibamos aproveitar da lição que elas nos dão, para que, na Terra, realizando a Vossa Santíssima Vontade, possamos um dia, no Céu, Vos louvar por toda a eternidade." },
+
+      { type: "heading", text: "Nas contas grandes, que separam os grupos de 7" },
+      { type: "p", text: "Vêde, ó Jesus, que são as lágrimas d’Aquela que mais Vos amou na Terra, e que mais Vos ama no Céu." },
+
+      { type: "heading", text: "Nas contas dos grupos de 7" },
+      { type: "p", text: "Meu Jesus, ouvi os nossos rogos, pelas Lágrimas de Vossa Mãe Santíssima." },
+
+      { type: "heading", text: "No fim (3 vezes, nas 3 contas finais)" },
+      { type: "p", text: "Vêde, ó Jesus, que são as lágrimas d’Aquela que mais Vos amou na Terra, e que mais Vos ama no Céu." },
+
+      { type: "heading", text: "Oração final" },
+      { type: "p", text: "Virgem Santíssima e Mãe das Dores, nós Vos pedimos que junteis os Vossos rogos aos nossos, a fim de que Jesus, Vosso Divino Filho, a quem nos dirigimos em nome das Vossas lágrimas de Mãe, ouça as nossas preces e nos conceda, com as graças que desejamos, a coroa da vida eterna. Amém." },
+
+      { type: "heading", text: "Jaculatórias finais" },
+      { type: "response", text: "Para rezar contemplando e beijando a medalha" },
+      {
+        type: "list",
+        items: [
+          "Por Vossa mansidão divina, ó Jesus Manietado, salvai o mundo do erro que o ameaça!",
+          "Ó Virgem Dolorosíssima, as Vossas Lágrimas derrubaram o império infernal!",
+        ],
+      },
+
+      { type: "heading", text: "Promessas" },
+      { type: "p", text: "“Minha filha: o que os homens Me pedem pelas lágrimas de Minha Mãe, Eu amorosamente concedo.” (Jesus Manietado, Campinas, 08-11-1929)" },
+      { type: "p", text: "“Esta é a Coroa de Minhas Lágrimas […]. Por meio desta Coroa o demônio será derrotado e o poder do inferno destruído.” (Nossa Senhora das Lágrimas, Campinas, 08-03-1930)" },
+    ],
+  },
+  {
+    slug: "coroa-da-irma-joseli",
+    title: "Coroa da Irmã Joseli",
+    group: "rosaries",
+    available: true,
+    blocks: [
+      { type: "heading", text: "Início" },
+      { type: "response", text: "Pai-Nosso" },
+      { type: "p", text: ourFather },
+      { type: "response", text: "3 Ave-Marias (em honra à Santíssima Trindade)" },
+      { type: "p", text: hailMary },
+      { type: "response", text: "Glória" },
+      { type: "p", text: glory },
+      { type: "p", text: "Eis aqui, Senhor, as uvas das parreiras do meu coração! Quero ser um(a) missionário(a) por meio da dor e do sofrimento, porque, por amor a Vós, nada dói!" },
+
+      { type: "heading", text: "Nas 32 contas" },
+      { type: "p", text: "Jesus, Tu és tudo e, por Ti, tudo vale a pena." },
+
+      { type: "heading", text: "Final" },
+      { type: "response", text: "1 Glória, com a Irmã Joseli" },
+      { type: "p", text: glory },
+      { type: "p", text: "Jesus, eu confio em Vós." },
+      { type: "p", text: "Santa Virgem, esperança nossa, em vossas mãos deposito esta prece (fazer o pedido) e peço que a apresente ao coração de seu Filho Divino, o meu Senhor Jesus Cristo. Amém." },
+    ],
   },
 ];
 
 export const groupTitles = {
   prayers: "Orações",
   readings: "Leituras",
-  rosaries: "Terços",
+  rosaries: "Terços e coroas",
 } as const;
 
 export function getPrayer(slug: string) {
