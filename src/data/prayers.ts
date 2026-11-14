@@ -87,7 +87,7 @@ export const prayers: Prayer[] = [
     blocks: [
       {
         type: "p",
-        text: "São Miguel Arcanjo, defendei-nos no combate, sede o nosso refúgio contra as maldades e ciladas do demônio. Ordene-lhe Deus, instantemente o pedimos, e vós, príncipe da milícia celeste, pelo poder divino, precipitai no inferno a satanás e a todos os espíritos malignos, que andam pelo mundo para perder as almas. Amém.",
+        text: "São Miguel Arcanjo, defendei-nos no combate, sede o nosso refúgio contra as maldades e ciladas do demônio. Ordene-lhe Deus, instantemente o pedimos, e vós, príncipe da milícia celeste, pelo Divino poder, precipitai no inferno a satanás e a todos os espíritos malignos, que andam pelo mundo para perder as almas. Amém.",
       },
     ],
   },
@@ -99,7 +99,7 @@ export const prayers: Prayer[] = [
     blocks: [
       {
         type: "p",
-        text: "Santo Anjo do Senhor, meu zeloso guardador, já que a ti me confiou a piedade divina, hoje e sempre me rege, me guarda, me governa e me ilumina. Amém.",
+        text: "Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarde, me governe e me ilumine. Amém.",
       },
     ],
   },
@@ -204,7 +204,7 @@ export const prayers: Prayer[] = [
       { type: "response", text: "Creio" },
       { type: "p", text: creed },
       { type: "heading", text: "Nas contas grandes (5 vezes)" },
-      { type: "p", text: "Eterno Pai, eu Vos ofereço o Corpo e Sangue, Alma e Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro." },
+      { type: "p", text: "Eterno Pai, eu Vos ofereço o Corpo e Sangue, Alma e Divindade de Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e os do mundo inteiro." },
       { type: "heading", text: "Nas contas pequenas (10 vezes em cada dezena)" },
       { type: "p", text: "Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro." },
       { type: "heading", text: "Final (3 vezes)" },
