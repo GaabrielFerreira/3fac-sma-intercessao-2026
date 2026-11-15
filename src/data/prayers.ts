@@ -147,7 +147,7 @@ export const prayers: Prayer[] = [
     blocks: [
       { type: "p", text: "Vinde Espírito Santo, enchei os corações dos vossos fiéis e acendei neles o fogo do vosso amor. Enviai o Vosso Espírito e tudo será criado. E renovareis a face da terra." },
       { type: "heading", text: "Oremos" },
-      { type: "p", text: "Ó Deus que instruíste os corações dos vossos fiéis, com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos da sua Consolação. Por Cristo Senhor Nosso. Amém." },
+      { type: "p", text: "Ó Deus que instruíste os corações dos vossos fiéis, com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos sempre da sua Consolação. Por Cristo Senhor Nosso. Amém." },
     ],
   },
   {
@@ -218,7 +218,7 @@ export const prayers: Prayer[] = [
     blocks: [
       {
         type: "p",
-        text: "A Cruz Sagrada seja a minha luz, não seja o dragão o meu guia. Retira-te, satanás! Nunca me aconselhes coisas vãs. É mau o que tu me ofereces, bebe tu mesmo os teus venenos. Amém.",
+        text: "A Cruz Sagrada seja a minha luz, não seja o dragão o meu guia. Retira-te, satanás! Nunca me aconselhes coisas vãs. É mau o que tu me ofereces, bebe tu mesmo o teu veneno. Amém.",
       },
     ],
   },
@@ -366,6 +366,9 @@ export const prayers: Prayer[] = [
           "Quinta: Luminosos",
         ],
       },
+      { type: "heading", text: "Oferecimento do Terço" },
+      { type: "p", text: "Divino Jesus, nós vos oferecemos este terço que vamos rezar, meditando nos mistérios da vossa Redenção. Concedei-nos, por intercessão da Virgem Maria, vossa Mãe, as virtudes que nos são necessárias para bem rezá-lo e a graça de ganharmos as indulgências desta santa devoção." },
+      { type: "p", text: "Oferecemos particularmente pelos pecados cometidos contra o Santíssimo Coração de Jesus e o Imaculado Coração de Maria, pela paz do mundo, pela conversão dos pecadores, pelas almas do purgatório, pelas intenções do Santo Padre, pelo Papa, pelo aumento e santificação do clero, pelas famílias, pelos doentes, pelos agonizantes, por todos aqueles que pediram nossas orações em particular e pelo nosso Brasil." },
       { type: "heading", text: "Início" },
       { type: "response", text: "Sinal da Cruz" },
       { type: "p", text: signOfTheCross },
