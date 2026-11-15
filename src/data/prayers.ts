@@ -104,6 +104,32 @@ export const prayers: Prayer[] = [
     ],
   },
   {
+    slug: "oracao-pedindo-a-armadura-de-deus",
+    title: "Oração pedindo a Armadura de Deus",
+    group: "prayers",
+    available: true,
+    blocks: [
+      { type: "p", text: "Pai celeste, eu agora, pela fé, clamo a proteção da vossa armadura, para que possa permanecer firme contra satanás e todas as suas hostes e, no Nome do Senhor Jesus +, vencê-las." },
+      { type: "p", text: "Eu tomo a Vossa Verdade contra as mentiras e os erros do inimigo astucioso. Eu tomo a Vossa Justiça para vencer os maus pensamentos e as acusações de satanás." },
+      { type: "p", text: "Eu tomo o Equipamento do Evangelho da Paz e deixo a segurança e os confortos da vida para combater o inimigo." },
+      { type: "p", text: "E, acima de tudo, eu tomo a Vossa Fé para barrar o caminho da minha alma às dúvidas e incredulidades. Eu tomo a Vossa Salvação e confio em vós para proteger meu corpo e minha alma contra os ataques de satanás. Eu tomo a Vossa Palavra e oro para que o Espírito Santo me capacite a usá-la eficazmente contra o inimigo, a cortar toda escravidão e a libertar todo cativo de satanás, no poderoso e conquistador Nome + de Jesus Cristo, meu Senhor." },
+      { type: "p", text: "Eu me visto desta Armadura, vivendo e orando em completa dependência de Ti, bendito Espírito Santo. Amém!" },
+    ],
+  },
+  {
+    slug: "oracao-de-purificacao",
+    title: "Oração de Purificação",
+    group: "prayers",
+    available: true,
+    blocks: [
+      { type: "p", text: "Eu, (falar seu nome), em nome de Jesus +, ordeno que saiam de mim, de minha casa, de minha família (colocar as intenções) e dos meus amigos de Comunidade, todas as forças espirituais do mal que possam ter nos contaminado, e ordeno que vão se prostrar aos pés da Cruz do Senhor Jesus e os proíbo de voltar." },
+      { type: "p", text: "Que saiam também agora, toda fúria do inimigo e todo dardo inflamado lançado contra nossos bens materiais, contra nosso organismo físico, contra nossa mente ou nosso espírito." },
+      { type: "p", text: "Neste momento, Senhor Jesus, eu me lavo com Teu sangue preciosíssimo, e também lavo Nele todas as pessoas que comigo convivem. Teu sangue seja para nós cobertura e proteção, e que o Divino Espírito Santo renove em cada um de nós Sua unção, Sua força e Seu poder. Pela poderosa intercessão da Virgem Maria, de seus Anjos e Santos. Amém!" },
+      { type: "heading", text: "Oração de São Bento (rezar 3 vezes)" },
+      { type: "p", text: "“A Cruz Sagrada + seja minha luz! Não seja o dragão o meu guia! Retira-te satanás! Nunca me aconselhes coisas vãs, é mau o que tu me ofereces. Bebe tu mesmo do teu veneno”" },
+    ],
+  },
+  {
     slug: "anjo-da-paz",
     title: "Oração do Anjo da Paz",
     group: "prayers",
