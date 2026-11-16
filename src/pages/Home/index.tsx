@@ -39,11 +39,11 @@ export function Home() {
         </div>
       </header>
 
-      <div className="mx-auto mt-8 max-w-md space-y-8 px-5">
+      <div className="mx-auto mt-8 max-w-md space-y-8 px-5 md:max-w-3xl lg:max-w-5xl">
         {groups.map((group) => (
           <section key={group}>
             <SectionTitle>{groupTitles[group]}</SectionTitle>
-            <div className="space-y-3">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {prayers
                 .filter((prayer) => prayer.group === group)
                 .map((prayer) => (
@@ -62,7 +62,7 @@ export function Home() {
 
         <section>
           <SectionTitle>Mais</SectionTitle>
-          <div className="space-y-3">
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             <ListCard title="Vida Plena em Deus" subtitle="As 12 práticas" icon={<ListChecks size={22} />} to="/vida-plena" />
             <ListCard title="Playlist FAC 26" subtitle="Abrir no Spotify" icon={<Music size={22} />} href={playlistUrl} />
           </div>

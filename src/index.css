@@ -14,12 +14,17 @@
   --color-paper: #f6f0e4;
 }
 
-body {
-  @apply bg-paper font-sans text-navy antialiased;
+/* Fundo da página. Fixo na tela, então o header fixo usa o mesmo e some a emenda */
+@utility page-bg {
+  background-color: var(--color-paper);
   background-image:
     radial-gradient(circle at 0% 0%, var(--color-sky-soft) 0, transparent 45%),
     radial-gradient(circle at 100% 100%, var(--color-sky-soft) 0, transparent 40%);
   background-attachment: fixed;
+}
+
+body {
+  @apply page-bg font-sans text-navy antialiased;
 }
 
 /* Borda irregular de pincel, usada nos títulos */

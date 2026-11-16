@@ -5,11 +5,11 @@ import { vidaPlenaItems } from "@/data/vidaPlena";
 export function VidaPlena() {
   return (
     <>
-      <PageHeader />
-      <main className="mx-auto max-w-md px-5 pb-12 pt-6">
+      <PageHeader className="max-w-md md:max-w-3xl" />
+      <main className="mx-auto max-w-md px-5 pb-12 pt-6 md:max-w-3xl md:pt-10">
         <BrushTitle>Vida Plena</BrushTitle>
         <p className="mt-2 font-hand text-2xl text-navy/80">12 práticas para viver em Deus</p>
-        <ol className="mt-6 space-y-3">
+        <ol className="mt-6 grid gap-3 md:grid-cols-2">
           {vidaPlenaItems.map((item, index) => (
             <li
               key={item.title}

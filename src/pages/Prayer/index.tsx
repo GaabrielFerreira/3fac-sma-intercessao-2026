@@ -52,10 +52,10 @@ export function Prayer() {
   return (
     <>
       <PageHeader />
-      <main className="mx-auto max-w-md px-5 pb-28 pt-6">
+      <main className="mx-auto max-w-md px-5 pb-28 pt-6 md:max-w-3xl md:pt-10">
         <BrushTitle>{prayer.title}</BrushTitle>
         {prayer.subtitle && <p className="mt-2 font-hand text-2xl text-navy/80">{prayer.subtitle}</p>}
-        <article className={`mt-6 space-y-4 leading-relaxed ${font.className}`}>
+        <article className={`mt-6 space-y-4 leading-relaxed md:rounded-3xl md:border-2 md:border-navy md:bg-white/60 md:p-8 md:shadow-[4px_4px_0_0_var(--color-navy)] ${font.className}`}>
           {prayer.blocks.map(renderBlock)}
         </article>
       </main>
