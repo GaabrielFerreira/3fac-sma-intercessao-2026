@@ -4,6 +4,7 @@ import { FontSizeControl } from "@/components/FontSizeControl";
 import { PageHeader } from "@/components/PageHeader";
 import { getPrayer } from "@/data/prayers";
 import type { Block } from "@/data/types";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { useFontSize } from "@/hooks/useFontSize";
 import { useWakeLock } from "@/hooks/useWakeLock";
 
@@ -11,13 +12,13 @@ function renderBlock(block: Block, index: number) {
   switch (block.type) {
     case "heading":
       return (
-        <h2 key={index} className="mt-8 font-display text-xl text-brand">
+        <h2 key={index} className="mt-8 font-display text-xl text-brand first:mt-0">
           {block.text}
         </h2>
       );
     case "response":
       return (
-        <p key={index} className="mt-5 font-hand text-2xl font-bold text-navy/70">
+        <p key={index} className="mt-5 font-hand text-2xl font-bold text-navy/70 first:mt-0">
           {block.text}
         </p>
       );
@@ -46,6 +47,7 @@ export function Prayer() {
   const font = useFontSize();
   useWakeLock();
   const prayer = getPrayer(slug);
+  useDocumentTitle(prayer?.title);
 
   if (!prayer) return <Navigate to="/" replace />;
 

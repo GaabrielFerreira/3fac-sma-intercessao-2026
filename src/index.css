@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap");
+/* Fontes empacotadas no app (sem depender do Google), assim funcionam offline desde a primeira visita */
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/caveat/latin-600.css";
+@import "@fontsource/caveat/latin-700.css";
+@import "@fontsource/permanent-marker/latin-400.css";
 @import "tailwindcss";
 
 /* Tema do projeto (cores tiradas da logo e do template oficial do FAC) */

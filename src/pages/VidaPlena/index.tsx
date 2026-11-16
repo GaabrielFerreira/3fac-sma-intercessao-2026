@@ -1,8 +1,10 @@
 import { BrushTitle } from "@/components/BrushTitle";
 import { PageHeader } from "@/components/PageHeader";
 import { vidaPlenaItems } from "@/data/vidaPlena";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 
 export function VidaPlena() {
+  useDocumentTitle("Vida Plena em Deus");
   return (
     <>
       <PageHeader className="max-w-md md:max-w-3xl" />
