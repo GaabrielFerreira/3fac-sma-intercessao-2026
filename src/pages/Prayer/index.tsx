@@ -1,10 +1,14 @@
+import { useState } from "react";
+import { Heart, Share2 } from "lucide-react";
 import { Navigate, useParams } from "react-router";
 import { BrushTitle } from "@/components/BrushTitle";
 import { FontSizeControl } from "@/components/FontSizeControl";
 import { PageHeader } from "@/components/PageHeader";
 import { getPrayer } from "@/data/prayers";
 import type { Block } from "@/data/types";
+import { cn } from "@/utils/cn";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { toggleFavorite, useFavorites } from "@/hooks/useFavorites";
 import { useFontSize } from "@/hooks/useFontSize";
 import { useWakeLock } from "@/hooks/useWakeLock";
 
@@ -12,7 +16,7 @@ function renderBlock(block: Block, index: number) {
   switch (block.type) {
     case "heading":
       return (
-        <h2 key={index} className="mt-8 font-display text-xl text-brand first:mt-0">
+        <h2 key={index} className="mt-8 font-display text-xl text-brand-text first:mt-0">
           {block.text}
         </h2>
       );
@@ -25,7 +29,7 @@ function renderBlock(block: Block, index: number) {
     case "verse":
       return (
         <p key={index}>
-          <sup className="mr-1 font-bold text-brand">{block.number}</sup>
+          <sup className="mr-1 font-bold text-brand-text">{block.number}</sup>
           {block.text}
         </p>
       );
@@ -42,22 +46,55 @@ function renderBlock(block: Block, index: number) {
   }
 }
 
+const actionClass =
+  "flex items-center gap-2 rounded-full border-2 border-line bg-surface/70 px-4 py-2 text-sm font-semibold";
+
 export function Prayer() {
   const { slug = "" } = useParams();
   const font = useFontSize();
   useWakeLock();
   const prayer = getPrayer(slug);
   useDocumentTitle(prayer?.title);
+  const favorites = useFavorites();
+  const [copied, setCopied] = useState(false);
 
   if (!prayer) return <Navigate to="/" replace />;
+
+  const isFavorite = favorites.includes(prayer.slug);
+
+  // Abre o compartilhar do celular; no PC (sem suporte) copia o link
+  async function share() {
+    const data = { title: prayer!.title, text: `${prayer!.title} | Intercessão FAC`, url: window.location.href };
+    try {
+      if (navigator.share) {
+        await navigator.share(data);
+      } else {
+        await navigator.clipboard.writeText(data.url);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    } catch {
+      // a pessoa cancelou ou o aparelho não permitiu, não precisa avisar
+    }
+  }
 
   return (
     <>
       <PageHeader />
-      <main className="mx-auto max-w-md px-5 pb-28 pt-6 md:max-w-3xl md:pt-10">
+      <main className="mx-auto max-w-md px-4 pb-28 pt-6 md:max-w-3xl md:px-5 md:pt-10">
         <BrushTitle>{prayer.title}</BrushTitle>
         {prayer.subtitle && <p className="mt-2 font-hand text-2xl text-navy/80">{prayer.subtitle}</p>}
-        <article className={`mt-6 space-y-4 leading-relaxed md:rounded-3xl md:border-2 md:border-navy md:bg-white/60 md:p-8 md:shadow-[4px_4px_0_0_var(--color-navy)] ${font.className}`}>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <button type="button" onClick={() => toggleFavorite(prayer.slug)} aria-pressed={isFavorite} className={cn(actionClass, isFavorite && "text-brand-text")}>
+            <Heart size={18} className={isFavorite ? "fill-brand-text" : ""} />
+            {isFavorite ? "Favorita" : "Favoritar"}
+          </button>
+          <button type="button" onClick={share} className={actionClass}>
+            <Share2 size={18} />
+            {copied ? "Link copiado!" : "Compartilhar"}
+          </button>
+        </div>
+        <article className={`mt-5 space-y-4 rounded-3xl border-2 border-line bg-surface/60 p-5 leading-relaxed shadow-[4px_4px_0_0_var(--color-line)] md:p-8 ${font.className}`}>
           {prayer.blocks.map(renderBlock)}
         </article>
       </main>

@@ -13,18 +13,18 @@ interface ListCardProps {
 }
 
 const base =
-  "flex items-center gap-3 rounded-2xl border-2 border-navy bg-white/70 px-4 py-3 shadow-[3px_3px_0_0_var(--color-navy)] transition active:translate-x-px active:translate-y-px active:shadow-none";
+  "flex items-center gap-3 rounded-2xl border-2 border-line bg-surface/70 px-4 py-3 shadow-[3px_3px_0_0_var(--color-line)] transition active:translate-x-px active:translate-y-px active:shadow-none";
 
 export function ListCard({ title, subtitle, icon, to, href, disabled }: ListCardProps) {
   const content = (
     <>
-      {icon && <span className="text-brand">{icon}</span>}
+      {icon && <span className="text-brand-text">{icon}</span>}
       <span className="flex-1">
         <span className="block font-bold leading-tight">{title}</span>
         {subtitle && <span className="block text-sm opacity-70">{subtitle}</span>}
       </span>
       {disabled ? (
-        <span className="font-hand text-lg text-brand">em breve</span>
+        <span className="font-hand text-lg text-brand-text">em breve</span>
       ) : (
         <ChevronRight size={20} />
       )}

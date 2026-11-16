@@ -15,9 +15,9 @@ export function VidaPlena() {
           {vidaPlenaItems.map((item, index) => (
             <li
               key={item.title}
-              className="flex items-center gap-4 rounded-2xl border-2 border-navy bg-white/70 px-4 py-3"
+              className="flex items-center gap-4 rounded-2xl border-2 border-line bg-surface/70 px-4 py-3"
             >
-              <span className="w-8 text-center font-display text-2xl text-brand">{index + 1}</span>
+              <span className="w-8 text-center font-display text-2xl text-brand-text">{index + 1}</span>
               <span>
                 <span className="block font-bold leading-tight">{item.title}</span>
                 {item.detail && <span className="block text-sm opacity-70">{item.detail}</span>}

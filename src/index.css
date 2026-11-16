@@ -18,6 +18,28 @@
   --color-sky-soft: #dbe9f7;
   --color-brand: #fd751f;
   --color-paper: #f6f0e4;
+  /* Cores fixas, que não mudam no modo escuro (cabeçalho da Home, título em papel) */
+  --color-deep: #002e7b;
+  --color-cream: #f6f0e4;
+  /* Cor das bordas e sombras dos cards (no escuro é mais suave que o texto) */
+  --color-line: #002e7b;
+  /* Superfície dos cards */
+  --color-surface: #ffffff;
+  /* Laranja de texto e ícones. Mantido igual ao brand de propósito (preferência do visual) */
+  --color-brand-text: #fd751f;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Modo escuro: troca só os tokens, então todo o site acompanha */
+:root.dark {
+  color-scheme: dark;
+  --color-navy: #d3e1f8;
+  --color-paper: #0b1426;
+  --color-sky-soft: #1d2d50;
+  --color-surface: #15233f;
+  --color-line: #6b84b5;
+  --color-brand-text: #fd751f;
 }
 
 /* Fundo da página. Fixo na tela, então o header fixo usa o mesmo e some a emenda */
@@ -31,6 +53,32 @@
 
 body {
   @apply page-bg font-sans text-navy antialiased;
+}
+
+/* Foco de teclado visível em links e botões */
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--color-navy);
+    outline-offset: 2px;
+  }
+}
+
+/* Troca de tema sem animação (a classe é posta só durante a troca) */
+.theme-switching,
+.theme-switching *,
+.theme-switching ::before,
+.theme-switching ::after {
+  transition: none !important;
+}
+
+/* Respeita quem pede menos animação no aparelho */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Borda irregular de pincel, usada nos títulos */
