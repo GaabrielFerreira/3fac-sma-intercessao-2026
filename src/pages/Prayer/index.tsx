@@ -4,7 +4,7 @@ import { Navigate, useParams } from "react-router";
 import { BrushTitle } from "@/components/BrushTitle";
 import { FontSizeControl } from "@/components/FontSizeControl";
 import { PageHeader } from "@/components/PageHeader";
-import { getPrayer } from "@/data/prayers";
+import { getPrayer, shareIntros } from "@/data/prayers";
 import type { Block } from "@/data/types";
 import { cn } from "@/utils/cn";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
@@ -62,14 +62,17 @@ export function Prayer() {
 
   const isFavorite = favorites.includes(prayer.slug);
 
-  // Abre o compartilhar do celular; no PC (sem suporte) copia o link
+  // Abre o compartilhar do celular; no PC (sem suporte) copia a mensagem.
+  // O link vai no campo `url` (e não dentro do texto), assim o celular reconhece que é um link
+  // e mostra a prévia dele. O texto termina em "acesse:" e os apps põem o link logo depois
   async function share() {
-    const data = { title: prayer!.title, text: `${prayer!.title} | Intercessão FAC`, url: window.location.href };
+    const text = `${shareIntros[prayer!.group]} (${prayer!.title}), acesse:`;
+    const url = window.location.href;
     try {
       if (navigator.share) {
-        await navigator.share(data);
+        await navigator.share({ title: prayer!.title, text, url });
       } else {
-        await navigator.clipboard.writeText(data.url);
+        await navigator.clipboard.writeText(`${text} ${url}`);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       }
@@ -91,7 +94,7 @@ export function Prayer() {
           </button>
           <button type="button" onClick={share} className={actionClass}>
             <Share2 size={18} />
-            {copied ? "Link copiado!" : "Compartilhar"}
+            {copied ? "Mensagem copiada!" : "Compartilhar"}
           </button>
         </div>
         <article className={`mt-5 space-y-4 rounded-3xl border-2 border-line bg-surface/60 p-5 leading-relaxed shadow-[4px_4px_0_0_var(--color-line)] md:p-8 ${font.className}`}>

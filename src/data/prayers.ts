@@ -7,7 +7,7 @@ import {
   ourFather,
   signOfTheCross,
 } from "./commonPrayers";
-import type { Prayer } from "./types";
+import type { Prayer, PrayerGroup } from "./types";
 
 // Textos escritos de memória, os bíblicos precisam ser conferidos com a Bíblia Ave-Maria.
 export const prayers: Prayer[] = [
@@ -602,6 +602,15 @@ export const groupTitles = {
   rosaries: "Terços e coroas",
   novenas: "Novenas",
 } as const;
+
+// Início da mensagem de compartilhar, de acordo com o tipo do conteúdo
+export const shareIntros: Record<PrayerGroup, string> = {
+  prayers: "Venha fazer essa oração comigo",
+  saints: "Venha fazer essa oração comigo",
+  readings: "Venha fazer essa leitura comigo",
+  rosaries: "Venha rezar comigo",
+  novenas: "Venha fazer essa novena comigo",
+};
 
 export function getPrayer(slug: string) {
   return prayers.find((prayer) => prayer.slug === slug && prayer.available);

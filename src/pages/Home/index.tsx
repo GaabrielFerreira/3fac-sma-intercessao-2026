@@ -130,7 +130,7 @@ function SectionShortcuts({ shortcuts }: { shortcuts: Shortcut[] }) {
     >
       <div
         ref={strip}
-        className="mx-auto flex w-fit max-w-full gap-1 overflow-x-auto px-3 py-2.5 [scrollbar-width:none]"
+        className="mx-auto flex w-fit max-w-full gap-1 overflow-x-auto px-3 py-2.5 scrollbar-none"
       >
         {shortcuts.map((item) => (
           <button
@@ -141,8 +141,8 @@ function SectionShortcuts({ shortcuts }: { shortcuts: Shortcut[] }) {
             className={cn(
               "flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors",
               active === item.id
-                ? "bg-sky-soft ring-1 ring-navy/20 dark:bg-navy/25 dark:ring-navy/50"
-                : "hover:bg-sky-soft/60"
+                ? "bg-surface shadow-sm ring-1 ring-navy/20 dark:bg-navy/25 dark:ring-navy/50"
+                : "hover:bg-surface/50"
             )}
           >
             <span className="text-brand-text">{item.icon}</span>

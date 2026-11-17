@@ -14,10 +14,10 @@
   --font-hand: "Caveat", cursive;
   --color-navy: #002e7b;
   --color-royal: #214cab;
-  --color-sky: #a9cdef;
-  --color-sky-soft: #dbe9f7;
   --color-brand: #fd751f;
   --color-paper: #f6f0e4;
+  /* Cor de fundo da página */
+  --color-page: #dbe9f7;
   /* Cores fixas, que não mudam no modo escuro (cabeçalho da Home, título em papel) */
   --color-deep: #002e7b;
   --color-cream: #f6f0e4;
@@ -36,19 +36,21 @@
   color-scheme: dark;
   --color-navy: #d3e1f8;
   --color-paper: #0b1426;
-  --color-sky-soft: #1d2d50;
   --color-surface: #15233f;
   --color-line: #6b84b5;
+  --color-page: #0b1426;
   --color-brand-text: #fd751f;
 }
 
-/* Fundo da página. Fixo na tela, então o header fixo usa o mesmo e some a emenda */
+/* Fundo da página: uma cor só, igual em todas as telas. O degradê antigo deixava a cor da
+   Home diferente da cor das orações e, no iPhone, aparecia outra cor nas bordas ao puxar a tela */
 @utility page-bg {
-  background-color: var(--color-paper);
-  background-image:
-    radial-gradient(circle at 0% 0%, var(--color-sky-soft) 0, transparent 45%),
-    radial-gradient(circle at 100% 100%, var(--color-sky-soft) 0, transparent 40%);
-  background-attachment: fixed;
+  background-color: var(--color-page);
+}
+
+/* A cor também vai no html, que é o que aparece quando a tela é puxada além do fim (iPhone) */
+html {
+  background-color: var(--color-page);
 }
 
 body {
